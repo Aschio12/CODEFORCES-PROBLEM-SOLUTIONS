@@ -1,0 +1,17 @@
+t = int(input().strip())
+results = []
+for _ in range(t):
+    n, k = map(int, input().split())
+    s = input().strip()
+    zeros = s.count('0')
+    ones = n - zeros
+    pairs = n // 2
+    z = pairs - k
+    
+    if zeros >= z and ones >= z and (zeros - z) % 2 == 0:
+        results.append("YES")
+    else:
+        results.append("NO")
+ 
+for res in results:
+    print(res)
