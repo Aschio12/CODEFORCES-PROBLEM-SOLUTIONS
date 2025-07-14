@@ -1,0 +1,35 @@
+t = int(input().strip())
+results = []
+for _ in range(t):
+    n = int(input().strip())
+    s = input().strip()
+    
+    left_exists = [False] * n
+    last_occurrence = {}
+    for i, char in enumerate(s):
+        if char in last_occurrence:
+            left_exists[i] = True
+        else:
+            left_exists[i] = False
+        last_occurrence[char] = i
+        
+    right_exists = [False] * n
+    seen = set()
+    for i in range(n-1, -1, -1):
+        char = s[i]
+        if char in seen:
+            right_exists[i] = True
+        else:
+            right_exists[i] = False
+            seen.add(char)
+            
+    found = False
+    for i in range(1, n-1):
+        if left_exists[i] or right_exists[i]:
+            found = True
+            break
+            
+    results.append("Yes" if found else "No")
+ 
+for res in results:
+    print(res)
