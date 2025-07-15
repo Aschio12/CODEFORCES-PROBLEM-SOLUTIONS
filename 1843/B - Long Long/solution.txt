@@ -1,0 +1,24 @@
+def main():
+    results = []
+    for _ in range(int(input())):
+        n = int(input())
+        arr = list(map(int,input().split()))
+        total_sum = 0
+        for num in arr:
+            total_sum += abs(num)
+            
+        min_ops = 0
+        in_segment = False
+        for num in arr:
+            if num < 0:
+                if not in_segment:
+                    min_ops += 1
+                    in_segment = True
+            elif num > 0:
+                in_segment = False
+                
+        results.append(f"{total_sum} {min_ops}")
+    
+    print("\n".join(results))
+ 
+main()
