@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    n = int(input().strip())
+    s = input().strip()
+    a_count = 0
+    ans = 0
+    for char in s:
+        if char == 'A':
+            a_count += 1
+        else:
+            if a_count > 0:
+                ans += a_count
+                a_count = 1
+    print(ans)
+ 
