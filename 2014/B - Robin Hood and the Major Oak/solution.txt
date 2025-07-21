@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    n, k = map(int, input().split())
+    total_odds_n = (n + 1) // 2
+    total_odds_before = (n - k + 1) // 2
+    odd_count = total_odds_n - total_odds_before
+    print("YES" if odd_count % 2 == 0 else "NO")
