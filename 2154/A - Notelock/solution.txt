@@ -1,0 +1,1 @@
+for _ in range(int(input())):    n,k=map(int,input().split())    s=input()    ans,prev_1=0,float("-inf")    for i in range(n):        if s[i]=="1":            if i-prev_1>=k:                ans+=1            prev_1=i    print(ans)
