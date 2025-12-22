@@ -1,0 +1,1 @@
+n,d=map(int,input().split())freinds=[]for _ in range(n) :    freinds.append(tuple(map(int,input().split())))freinds.sort()l=0ans,current=0,0for r in range(len(freinds)):    current+=freinds[r][1]    while freinds[r][0]-freinds[l][0]>=d:        current-=freinds[l][1]        l+=1    ans=max(ans,current)print(ans)
