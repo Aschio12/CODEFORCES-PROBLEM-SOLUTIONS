@@ -1,0 +1,1 @@
+n,t=map(int,input().split()) arr=list(map(int,input().split()))current,l=0,0ans=0for r in range(len(arr)):    current+=arr[r]    while current>t:        current-=arr[l]        l+=1    ans=max(ans,r-l+1)print(ans)
