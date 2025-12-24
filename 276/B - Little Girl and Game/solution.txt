@@ -1,0 +1,1 @@
+s=input()count={}turn=Truefor a in s:    if a in count:        count[a]+=1    else:        count[a]=1occurance= sum(v % 2 for v in count.values())if occurance==0 or occurance%2==1:    print("First")else:    print("Second")
