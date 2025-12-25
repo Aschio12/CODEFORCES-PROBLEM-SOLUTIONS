@@ -1,0 +1,1 @@
+for _ in range(int(input())):    n=int(input())    arr=list(map(int,input().split()))    index=[0]*101    for num in arr:        index[num]+=1    for i in range(len(arr)):        if index[arr[i]]==1:            print(i+1)            break
