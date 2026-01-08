@@ -1,0 +1,1 @@
+import sys data = sys.stdin.read().strip().split()it = iter(data) def ni():    return int(next(it)) def ns():    return next(it) def solve():     n = ni()                     s = ns()    l,r=0,n-1    while l<r:        if int(s[l])+int(s[r])==1:            l+=1            r-=1        else:            break    print(r-l+1 if s else 0)      t = ni() for _ in range(t):    solve()
