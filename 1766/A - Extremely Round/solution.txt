@@ -1,0 +1,1 @@
+for _ in range(int(input())):    num=input()    n=len(num)    if n==1:        print(int(num))    elif n==2:        if num=='10':            print(10)        else:            print(10+(int(num[0])-1))    else:        print(10+9*(n-2)+int(num[0])-1)
