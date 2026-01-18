@@ -1,0 +1,1 @@
+import sys data = sys.stdin.read().strip().split()it = iter(data) def ni():    return int(next(it)) def ns():    return next(it) def solve():        n = ni()                     arr = [ni() for _ in range(n)]       maxx,count=0,0    for num in arr:        if maxx>num:            count+=1        else:            maxx=num    print(count)  t = ni() for _ in range(t):    solve()
