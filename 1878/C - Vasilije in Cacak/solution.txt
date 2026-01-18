@@ -1,0 +1,1 @@
+import sys data = sys.stdin.read().strip().split()it = iter(data) def ni():    return int(next(it)) def ns():    return next(it) def solve():        n ,k,x= ni(),ni(),ni()                    minn=k*(k+1)/2    maxx=(n*(n+1)/2)-((n-k)*(n-k+1)/2)    if x>=minn and x<=maxx:        print("YES")    else:        print("NO") t = ni() for _ in range(t):    solve()
