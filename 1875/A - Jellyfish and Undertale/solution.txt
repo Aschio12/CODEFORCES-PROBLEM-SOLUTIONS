@@ -1,0 +1,1 @@
+import sys data = sys.stdin.read().strip().split()it = iter(data) def ni():    return int(next(it)) def ns():    return next(it) def solve():                      a,b,n = ni(),ni(),ni()                   arr = [ni() for _ in range(n)]    count=0          for i in range(n):        count+=min(arr[i],a-1)    print(count+b)    t = ni() for _ in range(t):    solve()
