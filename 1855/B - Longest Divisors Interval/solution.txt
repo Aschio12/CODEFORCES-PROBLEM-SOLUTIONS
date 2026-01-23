@@ -1,0 +1,1 @@
+import sys data = sys.stdin.read().strip().split()it = iter(data) def ni():    return int(next(it)) def ns():    return next(it) def solve():               n = ni()                   i=1    while n%i==0:        i+=1    print(i-1)                   t = ni() for _ in range(t):    solve()
