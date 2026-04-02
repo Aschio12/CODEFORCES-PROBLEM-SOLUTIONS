@@ -1,0 +1,1 @@
+import syssys.setrecursionlimit(1000)  def dfs(tot):    if len(tot)==1:        return 0    tot=sum(int(num) for num in tot)     return 1+dfs(str(tot))   print(dfs(input()))
