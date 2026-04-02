@@ -1,0 +1,1 @@
+import syssys.setrecursionlimit(15) def rec(new,old,ans,left):    if new==0:        return ans     ans+=new    tot=new+left    new=tot//old    left=tot%old     return rec(new,old,ans,left)     a,b=map(int,input().split())print(rec(a,b,0,0))
