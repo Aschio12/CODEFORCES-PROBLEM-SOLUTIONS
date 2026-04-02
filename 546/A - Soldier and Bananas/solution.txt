@@ -1,0 +1,1 @@
+import syssys.setrecursionlimit(1005)k,have,b=map(int,input().split()) required=0def rec(i,k,b):    if i==b:        return i*k    required=i*k    return required+rec(i+1,k,b)  cost=rec(1,k,b)print(0 if have>=cost else cost-have)
