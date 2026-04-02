@@ -1,0 +1,1 @@
+import syssys.setrecursionlimit(1005)def rec(steps,tot,m):    if steps==0:        return m    leave,enter=map(int,input().split())    tot+=enter-leave    m=max(m,tot)    return rec(steps-1,tot,m)     n=int(input())first_leave,first_enter=map(int,input().split())print(rec(n-1,first_enter,first_enter))
