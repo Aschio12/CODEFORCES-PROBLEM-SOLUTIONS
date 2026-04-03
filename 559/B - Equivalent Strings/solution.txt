@@ -1,0 +1,1 @@
+a=input()b=input()def rec(s):    if len(s)%2!=0:        return s    mid=len(s)//2    left=rec(s[:mid])    right=rec(s[mid:])     if left<right:        return left+right    else:        return right+left   print("YES" if rec(a)==rec(b) else "NO")
