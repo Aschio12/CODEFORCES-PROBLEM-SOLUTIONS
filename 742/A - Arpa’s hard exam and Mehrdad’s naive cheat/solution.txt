@@ -1,0 +1,1 @@
+n=int(input()) def rec(base,pow):    if pow==0:        return 1    half=rec(base,pow//2)    result=(half*half)%10    if pow%2!=0:        result=(result*base)%10    return result  print(rec(8,n))
