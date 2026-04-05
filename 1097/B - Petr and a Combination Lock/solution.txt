@@ -1,0 +1,1 @@
+n=int(input())arr=[]for _ in range(n):    arr.append(int(input())) def rec(idx,current):    if idx==n:        if current%360==0:            return True        else:            return False        add=rec(idx+1,current+arr[idx])    remove=rec(idx+1,current-arr[idx])    return add or remove print("YES" if rec(0,0) else "NO")
