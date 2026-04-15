@@ -1,1 +1,1 @@
-n=int(input())arr=list(map(int,input().split()))maxx=200000mark=[0]*(200000+1)for price in arr:    mark[price]+=1for i in range(1,len(mark)):    mark[i]=mark[i-1]+mark[i]for _ in range(int(input())):    m=int(input())    if m>maxx:        print(mark[maxx])    else:        print(mark[m])
+n=int(input())shop=list(map(int,input().split()))shop.sort()for _ in range(int(input())):    mi=int(input())    l,r=0,n-1    while l<=r:        mid=(l+r)//2        if shop[mid]<=mi:            l=mid+1        else:            r=mid-1       print(l)
